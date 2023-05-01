@@ -1,26 +1,37 @@
 Task 1: Extract Nouns for Classes
--math game
--turns
+-game
 -question
 -player
 
 Task 2: Write their roles
+-Main 
+  require all classes and run the classes in this file
+
+-Game Class
+  Generate the questions, players, turn(current player)
+
+  Turn (method)
+    will contain the game loop (where each instance of the loop is the other players turn)
+      
+    deals with the flow of the players turn during the game by figuring out who's turn it is according to who answered the question last.
+    
 
 -Question class
   will be responsible for the logic of prompting questions to the player and responding if a player has answered the question right or not. Generate random question from 1-20.
 
 -Player class
-  can store the data of the players, such as name, score, and health.
-
--Turn class
-  deals with the flow of the players turn during the game by figuring out who's turn it is according to who answered the question last.
+  can store the data of the players, such as name, and health/lives.
 
 Task 3: Methods for each class
   QUESTION CLASS
-    keep track of current player
+  initializer(1,2 ) #two numbers
+    question = answer
 
-  TURN 
-      will contain the game loop (where each instance of the loop is the other players turn)
-  
+  GAME 
+  initialize(players)
+  initialize with turn?
+  keep track of current player (turn method)
+
   PLAYER 
-      initialize a player including name, health, score
+      initialize a player including name, lives
+      initializer(name, health)
